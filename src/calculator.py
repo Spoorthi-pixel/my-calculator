@@ -20,7 +20,9 @@ def multiply(a, b):
 
 
 def divide(a, b):
-    """Divide a by b"""
+    """Return division of a by b, with zero-division handling."""
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
     return a / b
 
 
@@ -35,8 +37,6 @@ def square_root(a):
         raise ValueError("Cannot calculate square root of negative number")
     return a**0.5
 
-
-# TODO: Students will add multiply, divide, power, sqrt functions
 
 if __name__ == "__main__":
     print("🧮 Calculator Module")
